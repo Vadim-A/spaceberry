@@ -1,0 +1,6 @@
+# created by virtualenv automatically
+classifier.joblib
+__pycache__
+bin
+lib
+pyvenv.cfg

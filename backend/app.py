@@ -18,6 +18,10 @@ y = dataset.target
 # Split the dataset into training (80%) and testing (20%) data
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size = 0.2, random_state = 0, shuffle = True)
 
+@app.route('/')
+def mainPage():
+    return 'Hello world'
+
 @app.route('/api', methods=['GET', 'POST'])
 def login():
     if request.method == 'POST':

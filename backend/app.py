@@ -29,5 +29,9 @@ def mainPage():
 	finally:
 		return result # {"id":1,"login":"demo","mail":"demo@spaceberry.ru","name":"demo","password":"demo"}
 
+@app.route('/example')
+def example():
+  return 'Example'
+
 if __name__ == '__main__':
 	app.run()

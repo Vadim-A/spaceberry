@@ -4,6 +4,7 @@ import numpy as np
 from sklearn import datasets
 from sklearn.model_selection import train_test_split
 
+count = 0
 app = Flask(__name__)
 
 classifier = joblib.load('classifier.joblib')
@@ -20,7 +21,9 @@ X_train, X_test, y_train, y_test = train_test_split(X, y, test_size = 0.2, rando
 
 @app.route('/')
 def mainPage():
-    return 'Hello world'
+    global count
+    count += 1
+    return 'Hello world ' + str(count)
 
 @app.route('/api', methods=['GET', 'POST'])
 def login():
@@ -41,11 +44,14 @@ def get_func():
     prediction = classifier.predict(X_test)
     print(prediction)
 
+    global count
+    count += 1
+
     types = { 0: "Iris Setosa", 1: "Iris Versicolour ", 2: "Iris Virginica"}
     response = jsonify({
       "statusCode": 200,
       "status": "Prediction made",
-      "result": "The type of iris plant is: " + types[prediction[0]]
+      "result": "The type of iris plant is: " + types[prediction[0]] + str(count)
       })
     response.headers.add('Access-Control-Allow-Origin', '*')
 

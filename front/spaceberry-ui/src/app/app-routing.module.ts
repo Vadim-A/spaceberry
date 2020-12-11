@@ -4,6 +4,7 @@ import { AppShellComponent } from './components/app-shell/app-shell.component';
 import { NotFoundComponent } from './components/not-found/not-found.component';
 import { moduleLinks } from './core/constants/app-links';
 import { AuthGuard } from './core/guards/auth/auth.guard';
+import { LoginPageRedirectGuard } from './core/guards/login-page-redirect-guard/login-page-redirect.guard';
 
 export const routes: Routes = [
   {
@@ -17,14 +18,20 @@ export const routes: Routes = [
           import('./home/home.module').then((m) => m.HomeModule),
         data: { preload: true },
       },
+      {
+        path: moduleLinks.settings,
+        loadChildren: () =>
+          import('./settings/settings.module').then((m) => m.SettingsModule),
+        data: { preload: true },
+      },
     ],
+    canActivate: [AuthGuard],
   },
   {
     path: moduleLinks.login,
     loadChildren: () =>
       import('./login/login.module').then((m) => m.LoginModule),
-    // canLoad: [AuthGuard],
-    // canActivate: [AuthGuard],
+    canActivate: [LoginPageRedirectGuard],
   },
   { path: '**', component: NotFoundComponent },
 ];

@@ -1,0 +1,60 @@
+@import "../../../scss/constants.scss";
+
+:host {
+  display: flex;
+  flex-flow: column nowrap;
+  flex: auto;
+}
+
+header {
+  display: flex;
+  flex-flow: row nowrap;
+  flex: none;
+  background-color: green;
+  height: 40px;
+
+  div {
+    display: flex;
+    align-items: center;
+  }
+
+  .header__page-title,
+  .header__user-name {
+    padding: 5px;
+  }
+
+  .header__page-title {
+    flex: auto;
+  }
+
+  .header__user-name {
+    padding: 5px;
+  }
+}
+
+aside {
+  width: 220px;
+}
+
+main {
+  display: flex;
+  flex: auto;
+  background-color: hotpink;
+
+  mat-drawer-container {
+    flex: auto;
+  }
+
+  .content {
+    flex: auto;
+  }
+}
+
+mat-list-option:focus {
+  // background-color: rgba(0, 0, 0, 0);
+  // background: none;
+}
+
+.active {
+  background-color: blue;
+}

@@ -31,7 +31,8 @@ export class AuthService {
   constructor() {
     const accessToken = localStorage.getItem(accessTokenName);
     if (accessToken) {
-      this.user = JSON.parse(accessToken);
+      console.log('accessToken', accessToken);
+      // this.user = JSON.parse(accessToken);
     }
   }
 

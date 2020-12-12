@@ -67,7 +67,7 @@ export const routes: Routes = [
         data: { preload: true },
       },
     ],
-    canActivate: [AuthGuard],
+    // canActivate: [AuthGuard],
   },
 
   {

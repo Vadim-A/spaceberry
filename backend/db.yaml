@@ -1,0 +1,4 @@
+mysql_host: 185.129.144.247
+mysql_user: 'user_spaceberry'
+mysql_password: 'user_spaceberry'
+mysql_db: 'db_spaceberry'

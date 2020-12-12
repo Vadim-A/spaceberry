@@ -1,18 +1,7 @@
-import {
-  ChangeDetectionStrategy,
-  Component,
-  OnInit,
-  TemplateRef,
-  ViewChild,
-} from '@angular/core';
+import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { moduleLinks } from 'src/app/core/constants/app-links';
 import { AuthService } from 'src/app/core/services';
-
-interface navigationLink {
-  path: string;
-  title: string;
-}
+import { navigationLink, NAVIGATION_LINKS } from './navigations-link';
 
 @Component({
   selector: 'app-app-shell',
@@ -21,16 +10,7 @@ interface navigationLink {
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class AppShellComponent implements OnInit {
-  navigationLinks: navigationLink[] = [
-    {
-      path: moduleLinks.home,
-      title: 'Главная',
-    },
-    {
-      path: moduleLinks.settings,
-      title: 'Настройки',
-    },
-  ];
+  navigationLinks = NAVIGATION_LINKS;
 
   activeNavigationLink?: navigationLink;
 

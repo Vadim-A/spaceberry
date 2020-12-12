@@ -19,6 +19,48 @@ export const routes: Routes = [
         data: { preload: true },
       },
       {
+        path: moduleLinks.analitycs,
+        loadChildren: () =>
+          import('./analitycs/analitycs.module').then((m) => m.AnalitycsModule),
+        data: { preload: true },
+      },
+      {
+        path: moduleLinks.supplyOrders,
+        loadChildren: () =>
+          import('./supply-orders/supply-orders.module').then(
+            (m) => m.SupplyOrdersModule
+          ),
+        data: { preload: true },
+      },
+      {
+        path: moduleLinks.customerSearch,
+        loadChildren: () =>
+          import('./customer-search/customer-search.module').then(
+            (m) => m.CustomerSearchModule
+          ),
+        data: { preload: true },
+      },
+      {
+        path: moduleLinks.logistics,
+        loadChildren: () =>
+          import('./logistics/logistics.module').then((m) => m.LogisticsModule),
+        data: { preload: true },
+      },
+      {
+        path: moduleLinks.messages,
+        loadChildren: () =>
+          import('./messages/messages.module').then(
+            (m) => m.MessagesRoutingModuleModule
+          ),
+        data: { preload: true },
+      },
+      {
+        path: moduleLinks.support,
+        loadChildren: () =>
+          import('./support/support.module').then((m) => m.SupportModule),
+        data: { preload: true },
+      },
+      {
         path: moduleLinks.settings,
         loadChildren: () =>
           import('./settings/settings.module').then((m) => m.SettingsModule),
@@ -27,6 +69,7 @@ export const routes: Routes = [
     ],
     canActivate: [AuthGuard],
   },
+
   {
     path: moduleLinks.login,
     loadChildren: () =>

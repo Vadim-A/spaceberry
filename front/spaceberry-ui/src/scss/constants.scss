@@ -1,177 +1,51 @@
 // Допустимые значения стилей
 
 // основные цвета
-$color-1: #0a1f44; // Цвет текста, Цвет фона хинта, цвет тени
-$color-2: #979eb4; // Цвет лейблов
-$color-3: #d1d6e4; // Цвет плейсхолдеров, цвет наведения навигационных кнопок в шапке, неактивных элементов
-$color-4: #0068ff; // Основной цвет, начальнай цвет градиента
-$color-5: #0b5de8; // Наведение
-$color-6: #20d1ff; // Конечный цвет градиента
-$color-7: #ffffff; // Основной цвет элементов
-// дополнительные цвета
-$color-8: #0bb07b; //
-$color-9: #ff1d31; //
-$color-10: #ebf0fa; // Цвет фона, Цвет текста на темном фоне Наведение на основной (белый) цвет элементов
-$color-11: #d5e2f9; // Фон плашки (перемещение)
-$color-12: hsla(216, 100%, 50%, 0.1);
-$color-13: #f7faff;
-$color-14: #e0e5f2; // Фон контейнера кнопок в редакторе представлений
-$color-15: #b2bad3; // Цвет фона для Sorting button
-$color-16: #fffbef; // Цвет фона для SnackBar
-$color-17: #f8bc75; // цвет бордера для SnackBar
-$color-18: #717b8d;
+$color-1: #000000;
+$color-2: #c4c4c4; // ?
+$color-3: #0047ff;
+$color-4: #8000ff;
+$color-6: #f4b000;
+$color-7: #ee3d5d;
+$color-8: #94c576;
+$color-9: #a3d286;
+$color-10: #8abd6a;
+$color-11: #cbebb7;
+$color-12: #7868bb;
+$color-13: #443480;
+$color-14: #ffffff;
 
-// Числовые константы для теней тени
-$blur-large: 16px; // Размытие для теней в модальных окнах, выдвигающихся панелей и выпадашках
-$blur-medium: 6px; // Размытие для теней для формы логина
-$blur-small: 4px; // Размытие для теней в остальных случаях
-$spread-large: 14px; // Растяжение для теней в модальных окнах, выдвигающихся панелей и выпадашках
-$spread-medium: 4px; // Растяжение для теней для формы логина
-$spread-small: 2px; // Растяжение для теней в остальных случаях
-$v-offset: 20px; // Смещение по вертикали для теней в модальных окнах, выдвигающихся панелей и выпадашках
+$border-widtth: 2px;
+$border-radius: 16px;
+$box-shadow: 2px 2px $border-radius rgba(68, 52, 128, 0.16);
 
 // Размеры шрифтов
-$font-size-32: 32px; // h1
-$font-size-24: 24px; // h2
-$font-size-18: 18px; // h3
-$font-size-16: 16px; // Основной текст
-$font-size-14: 14px; // Ссылка в поиске
-$font-size-13: 13px; // ссылка в ячейке
-$font-size-12: 12px; // Хлебные крошки, хинты
-$font-size-11: 11px; // подсказки валидатора
-$font-size-10: 10px;
+$font-size-24: 24px; // h1 ??
+$font-size-18: 18px; // Headline
+$font-size-16: 16px; // Subhead
+$font-size-14: 14px; // Body
+$font-size-12: 12px; // Footnote
 
 $font-family-base: "Lato", Arial, sans-serif;
-$ellipsis-text-line-height: 20px;
 
 // https://material.io/design/color/the-color-system.html#color-theme-creation
-$color-primary: $color-4;
-$color-secondary: $color-7;
-$color-background: $color-10;
-$color-background-alt: $color-11;
-$color-error: $color-9;
-$color-success: $color-8;
-$color-on-primary: $color-10;
-$color-on-secondary: $color-1;
-$color-link: $color-4;
-$color-label: $color-2;
-$color-placeholder: $color-3;
-$color-sorting-button: $color-15;
-$color-snackbar-background: $color-16;
-$color-snackbar-border: $color-17;
-$color-gridtext-main: $color-1;
-$color-gridtext-header: $color-3;
-$color-border: $color-12;
-$color-disable: $color-3;
-$color-hover-primary: $color-5;
-$color-hover-secondary: $color-1;
-$color-background-hint: $color-1;
-$color-background-sb-main: $color-13;
+$color-font: $color-1;
+$color-link: $color-3;
+$color-link-active: $color-4;
+$color-accept: $color-8;
+$color-warring: $color-6;
+$color-error: $color-7;
 
-$color-treetext-main: $color-1;
-$color-treebackground: $color-7;
-
-$color-term-operator: $color-1;
-$color-term-indicator: #29c08e;
-$color-term-dictionary: #29c08e;
-$color-term-element: $color-17;
-$color-term-param: #6e839c;
-$color-term-variable: $color-6;
-$color-term-custom: $color-17;
-$color-term-error: #f87575;
-
-$color-versions-background: rgba(0, 104, 255, 0.1);
+$color-button-normal: $color-8;
+$color-button-hover: $color-9;
+$color-button-active: $color-10;
+$color-button-disabled: $color-11;
+$color-button-border: $color-8;
+$color-input-border: $color-12;
+$color-slider: $color-13;
+$color-background: $color-13;
 
 // Шаблоны стилей для элементов UI
 $gutter: 15px; // базовая единица отступа
 $big-gutter: $gutter * 2;
 $half-gutter: floor($gutter / 2);
-$row-linear-gradient: linear-gradient($color-4, $color-6);
-$border: 1px solid $color-border; // Границы
-$row-linear-gradient: linear-gradient($color-4, $color-6);
-$box-shadow: 0px 0px $blur-medium $spread-small rgba($color-1, 0.1); // Тени элементов
-$box-shadow-down: 0px 5px $blur-small $spread-small rgba($color-1, 0.1); // Тени элементов
-$box-shadow-dropdown: 0 11px 12px 3px rgba($color-on-secondary, 0.1);
-$box-shadow-dropdown-top: 0 -11px 12px 3px rgba($color-on-secondary, 0.1);
-$border-login-input: 1px solid rgba($color-primary, 0.2); // Границы для импутов на форме логина
-$border-radius-default: 5px;
-
-$header-height: 77px;
-$button-header-height: 38px;
-$sidebar-width: 31px;
-$grid-th-height: 46px;
-$kendo-numeric-width: 19.4em;
-$header-offset: 206px;
-$modal-confirm-min-height-ie: 138px;
-$modal-process-min-height-ie: 217px;
-$panel-width: 334px;
-$editor-modal-width: 374px;
-$header-sub-panel-height: 45px;
-
-$icon-width-default: 20px;
-$icon-height-default: 20px;
-
-//Адаптивность
-$width-phone-min: 480px;
-$width-tablet-min: 768px;
-$width-desktop-min: 992px;
-$width-large-desktop-min: 1200px;
-
-//Кнопки
-$button-height-default: 32px;
-$button-color-primary: $color-4;
-$button-color-hover-primary: $color-5;
-$button-border-radius: 2px;
-$button-text-margin: 5px;
-$button-linear-gradient: linear-gradient(
-  rgba(rgb(0, 32, 255), 0),
-  rgba(rgb(0, 32, 255), 0.2)
-);
-$button-linear-gradient-active: linear-gradient(
-  rgba(rgb(0, 45, 255), 0.2),
-  rgba(rgb(0, 45, 255), 0)
-);
-$button-box-shadow: inset 0 2px 2px 0 rgba(0, 0, 0, 0.06);
-
-//Элементы форм
-$validation-message-max-height: 20px;
-$form-element-height-default: 40px;
-$form-element-width-default: 300px;
-$textarea-height-default: 80px;
-$form-element-input-color: $color-1;
-$dropdown-max-width: 300px;
-$dropdown-height: 250px;
-$pop-up-z-index: 1000;
-
-$input-min-width: 190px;
-$calendar-width: 120px;
-$calendar-min-width: 120px;
-$calendar-control-max-width: 160px;
-$calendar-control-input-height: 20px;
-$texarea-min-width: 250px;
-$wide-input-min-width: 350px;
-
-//
-$gp-nsi-side-bar-width: 44px;
-$gp-nsi-side-bar-z-index: 8;
-$gp-nsi-side-bar-main-button-height: $header-height - 1; // -1 - компенсация высоты border'a
-
-// modal
-$modal-centered-max-height: 400px;
-$modal-editor-box-shadow: 0 0px 16px 14px rgba(10, 31, 68, 0.1);
-$modal-footer-shrink-min-height: 32px;
-
-$gp-nsi-grid-no-record-top: 67px;
-
-$grid-cell-default-padding: 2px;
-$grid-cell-content-default-padding: 1px;
-
-$formulas-macros-edit-header-height: 80px;
-
-$expander-icon-height: 12px;
-$expander-icon-width: $gutter + $expander-icon-height;
-$line-numbers-bar-width: 45px;
-
-// breadcrumbs
-$breadcrumbs-line-height: 1.1px;
-$breadcrumbs-path-name-margin: 31px;

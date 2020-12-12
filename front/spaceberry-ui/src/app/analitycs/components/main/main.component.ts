@@ -7,7 +7,6 @@ import { HistoryDataProviderService } from 'src/app/core/services/history-data-p
   styleUrls: ['./main.component.scss'],
 })
 export class MainComponent implements OnInit {
-  constructor(historyDataProviderService: HistoryDataProviderService) {}
 
   ngOnInit(): void {}
 }

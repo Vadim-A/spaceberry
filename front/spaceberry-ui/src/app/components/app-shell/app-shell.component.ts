@@ -18,7 +18,6 @@ export class AppShellComponent implements OnInit {
     this.activeNavigationLink = this.navigationLinks.find((link) =>
       this.router.url.startsWith('/' + link.path)
     );
-    console.log(this.router.url);
   }
 
   ngOnInit(): void {}

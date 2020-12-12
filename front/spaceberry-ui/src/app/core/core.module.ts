@@ -3,10 +3,16 @@ import { CommonModule } from '@angular/common';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { AuthService } from './services';
 import { AuthGuard, LoginPageRedirectGuard } from './guards';
+import { HistoryDataProviderService } from './services/history-data-provider-services/history-data-provider-services.service';
 
 @NgModule({
   imports: [CommonModule, HttpClientModule],
-  providers: [AuthService, AuthGuard, LoginPageRedirectGuard],
+  providers: [
+    AuthService,
+    AuthGuard,
+    LoginPageRedirectGuard,
+    HistoryDataProviderService,
+  ],
 })
 export class CoreModule {
   constructor(

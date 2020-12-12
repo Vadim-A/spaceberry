@@ -46,13 +46,9 @@ main {
   }
 
   .content {
+    display: flex;
     flex: auto;
   }
-}
-
-mat-list-option:focus {
-  // background-color: rgba(0, 0, 0, 0);
-  // background: none;
 }
 
 .active {

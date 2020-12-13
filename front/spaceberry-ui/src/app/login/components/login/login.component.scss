@@ -1,7 +1,6 @@
 :host {
   display: flex;
   justify-content: center;
-  margin: 100px 0px;
 }
 
 .mat-form-field {
@@ -25,4 +24,15 @@ mat-card-content {
 .button {
   display: flex;
   justify-content: flex-end;
+}
+
+.root {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: url('../../../../assets/images/strawberry-login.png') center no-repeat;
+  width: 100vw;
+  height: 100vh;
+  background-size: cover;
 }

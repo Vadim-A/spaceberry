@@ -1,17 +1,17 @@
 <header class="header">
   <div class="header__menu-button">
     <button mat-icon-button matri color="accent" (click)="drawer.toggle()">
-      <mat-icon>menu</mat-icon>
+      <mat-icon [style.color]="'white'">menu</mat-icon>
     </button>
   </div>
 
-  <div class="header__page-title">название страницы / хлебные крошки</div>
+  <div class="header__page-title">Smart Strawberry</div>
 
-  <div class="header__user-name">имя пользователя</div>
+  <div class="header__user-name">Логин: demo</div>
 
   <div class="header__logout-button">
     <button mat-icon-button color="accent" (click)="onLogoutClick()">
-      <mat-icon>exit_to_app</mat-icon>
+      <mat-icon [style.color]="'white'">exit_to_app</mat-icon>
     </button>
   </div>
 </header>

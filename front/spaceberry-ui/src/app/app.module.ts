@@ -7,6 +7,7 @@ import { AppShellComponent } from './components/app-shell/app-shell.component';
 import { NotFoundComponent } from './components/not-found/not-found.component';
 import { CoreModule } from './core/core.module';
 import { SharedModule } from './shared/shared.module';
+import { PieChartComponent } from './components/pie-chart/pie-chart.component';
 
 @NgModule({
   declarations: [AppComponent, AppShellComponent, NotFoundComponent],

@@ -14,7 +14,7 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatSelectModule } from '@angular/material/select'; //?
 import { MatListModule } from '@angular/material/list';
 import { MAT_RIPPLE_GLOBAL_OPTIONS } from '@angular/material/core';
-import { NgxChartsModule } from '@swimlane/ngx-charts';
+import { NgxChartsModule, PieChartModule } from '@swimlane/ngx-charts';
 
 @NgModule({
   imports: [
@@ -33,6 +33,7 @@ import { NgxChartsModule } from '@swimlane/ngx-charts';
     MatSelectModule,
     MatListModule,
     NgxChartsModule,
+    PieChartModule
   ],
   declarations: [],
   exports: [
@@ -50,6 +51,7 @@ import { NgxChartsModule } from '@swimlane/ngx-charts';
     MatSelectModule,
     MatListModule,
     NgxChartsModule,
+    PieChartModule,
   ],
   providers: [
     { provide: MAT_RIPPLE_GLOBAL_OPTIONS, useValue: { disabled: true } }, // что бы небыло анимации при нажатии на кнопки

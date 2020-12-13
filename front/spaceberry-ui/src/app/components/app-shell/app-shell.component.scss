@@ -45,11 +45,13 @@ main {
 
   mat-drawer-container {
     flex: auto;
+    height: 100%;
   }
 
   .content {
     display: flex;
     flex: auto;
+    height: 100%;
   }
 }
 

@@ -14,3 +14,50 @@
   width: 100%;
   height: 100%;
 }
+
+mat-panel-title {
+  font-weight: bold;
+  font-size: 20px;
+  color: #443480;
+}
+
+.chart {
+  display: flex;
+  flex-direction: column;
+
+  &__group {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
+}
+
+::ng-deep {
+  .total-value  {
+    line-height: normal;
+    color: #443480;
+    font-weight: bold;
+  }
+
+  .total-label {
+    line-height: normal;
+    color: #443480;
+  }
+
+  .item-value  {
+    line-height: normal;
+    color: #443480;
+    font-weight: bold;
+  }
+
+  .item-percent  {
+    line-height: normal;
+    color: #443480;
+  }
+
+  .item-label {
+    line-height: normal;
+    color: #443480;
+
+  }
+}

@@ -1,1 +1,37 @@
-Диагностика
+<div class="info-panel">
+  <app-value-card [value]="'1'" [text]="'Комплекс'"></app-value-card>
+  <app-value-card [value]="'5'" [text]="'Теплиц'"></app-value-card>
+  <app-value-card [value]="'500м2'" [text]="'Общая площадь'"></app-value-card>
+  <app-value-card [value]="'623 т.'" [text]="'Прогноз урожая'"></app-value-card>
+  <app-value-card
+    [value]="'689 987 р.'"
+    [text]="'Прогноз заработка'"
+  ></app-value-card>
+
+  <div class="button">
+    <div>Все теплицы</div>
+  </div>
+
+  <div class="button">
+    <div>Все теплицы</div>
+  </div>
+</div>
+
+<div class="messages">
+  <div class="info-list">
+    <div class="info-list__title">События теплицы</div>
+    <div *ngFor="let item of pokMessages" class="message">
+      <div class="title" [ngClass]="item.class">{{ item.title }}</div>
+      <div>{{ item.text }}</div>
+      <div class="date">{{ item.date }}</div>
+    </div>
+  </div>
+  <div class="info-list">
+    <div class="info-list__title">События оборудования</div>
+    <div *ngFor="let item of diagnosticsMessages" class="message">
+      <div class="title" [ngClass]="item.class">{{ item.title }}</div>
+      <div>{{ item.text }}</div>
+      <div class="date">{{ item.date }}</div>
+    </div>
+  </div>
+</div>

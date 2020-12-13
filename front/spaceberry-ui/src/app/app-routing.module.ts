@@ -11,11 +11,17 @@ export const routes: Routes = [
     path: '',
     component: AppShellComponent,
     children: [
-      { path: '', pathMatch: 'full', redirectTo: 'home' },
+      { path: '', pathMatch: 'full', redirectTo: 'farm' },
       {
         path: moduleLinks.home,
         loadChildren: () =>
-          import('./home/home.module').then((m) => m.HomeModule),
+          import('./farm/farm.module').then((m) => m.DiagnosticsModule),
+        data: { preload: true },
+      },
+      {
+        path: moduleLinks.aggregates,
+        loadChildren: () =>
+          import('./home/home.module').then((m) => m.HomeModule), // todo: переименовать модуль в home aggregates
         data: { preload: true },
       },
       {

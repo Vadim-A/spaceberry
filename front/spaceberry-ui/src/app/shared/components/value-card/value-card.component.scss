@@ -1,0 +1,63 @@
+// todo: брать из констант
+.prediction {
+  display: flex;
+  color: #443480;
+
+  &__content {
+    display: flex;
+    flex-flow: row wrap;
+  }
+
+  &__block {
+    height: 100px;
+  }
+
+  &__title {
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 21px;
+    color: #443480;
+  }
+
+  &__value {
+    font-size: 40px;
+    line-height: 54px;
+    color: #443480;
+    font-weight: bold;
+  }
+
+  &__description {
+    color: #443480;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 19px;
+  }
+
+  &__gradient {
+    margin: 5px 0;
+    width: 128px;
+    height: 6px;
+    background: linear-gradient(
+      270deg,
+      #f06f7d 0%,
+      #e2ce18 28.12%,
+      #94c576 42.19%,
+      #94c576 63.54%,
+      #0997e8 100%
+    );
+    border-radius: 8px;
+    position: relative;
+
+    &__spinner {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      border: 2px solid #ffffff;
+      background-color: #443480;
+    }
+  }
+}

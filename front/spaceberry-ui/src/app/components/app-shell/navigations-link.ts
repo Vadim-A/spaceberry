@@ -11,21 +11,25 @@ export const NAVIGATION_LINKS: navigationLink[] = [
     title: 'Главная',
   },
   {
+    path: moduleLinks.aggregates,
+    title: 'Комплексы',
+  },
+  {
     path: moduleLinks.analitycs,
     title: 'Аналитика',
   },
-  {
-    path: moduleLinks.supplyOrders,
-    title: 'Заказы на поставку',
-  },
-  {
-    path: moduleLinks.customerSearch,
-    title: 'Поиск покупателей',
-  },
-  {
-    path: moduleLinks.logistics,
-    title: 'Логистика',
-  },
+  // {
+  //   path: moduleLinks.supplyOrders,
+  //   title: 'Заказы на поставку',
+  // },
+  // {
+  //   path: moduleLinks.customerSearch,
+  //   title: 'Поиск покупателей',
+  // },
+  // {
+  //   path: moduleLinks.logistics,
+  //   title: 'Логистика',
+  // },
   {
     path: moduleLinks.diagnostics,
     title: 'Диагностика',

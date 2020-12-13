@@ -17,6 +17,7 @@ import { MatExpansionModule } from '@angular/material/expansion';
 import { MAT_RIPPLE_GLOBAL_OPTIONS } from '@angular/material/core';
 import { NgxChartsModule, PieChartModule } from '@swimlane/ngx-charts';
 import { WidgetComponent } from '../components/widget/widget.component';
+import { ValueCardComponent } from './components/value-card/value-card.component';
 
 @NgModule({
   imports: [
@@ -38,9 +39,7 @@ import { WidgetComponent } from '../components/widget/widget.component';
     NgxChartsModule,
     PieChartModule,
   ],
-  declarations: [
-    WidgetComponent,
-  ],
+  declarations: [WidgetComponent, ValueCardComponent],
   exports: [
     CommonModule,
     ReactiveFormsModule,
@@ -58,7 +57,8 @@ import { WidgetComponent } from '../components/widget/widget.component';
     MatExpansionModule,
     NgxChartsModule,
     PieChartModule,
-    WidgetComponent
+    WidgetComponent,
+    ValueCardComponent,
   ],
   providers: [
     { provide: MAT_RIPPLE_GLOBAL_OPTIONS, useValue: { disabled: true } }, // что бы небыло анимации при нажатии на кнопки

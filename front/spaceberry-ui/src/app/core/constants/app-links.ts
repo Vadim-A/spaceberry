@@ -1,6 +1,7 @@
 export const moduleLinks = {
   login: 'login',
-  home: 'home',
+  home: 'farm',
+  aggregates: 'aggregates',
   analitycs: 'analytics',
   supplyOrders: 'supplyOrders',
   customerSearch: 'customerSearch',

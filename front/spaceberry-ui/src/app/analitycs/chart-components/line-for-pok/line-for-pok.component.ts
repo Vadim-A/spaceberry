@@ -1,5 +1,13 @@
-import { Component, OnInit, ChangeDetectionStrategy } from '@angular/core';
-import { multi } from './data';
+import {
+  Component,
+  OnInit,
+  ChangeDetectionStrategy,
+  Input,
+} from '@angular/core';
+import {
+  HistoryDataProviderService,
+  PokName,
+} from 'src/app/core/services/history-data-provider-services/history-data-provider-services.service';
 
 @Component({
   selector: 'app-line-for-pok',
@@ -8,8 +16,13 @@ import { multi } from './data';
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class LineForPokComponent implements OnInit {
-  multi?: any[];
-  view: [number, number] = [700, 300];
+  @Input() aggregateId!: number;
+  @Input() greenhouseId: number[] = [1, 2, 3, 4, 5];
+  @Input() pok!: PokName;
+  @Input() lastPeriodCount = 12;
+
+  chardData: any[] = [];
+  view: [number, number] = [500, 300];
 
   // options
   legend: boolean = true;
@@ -19,29 +32,51 @@ export class LineForPokComponent implements OnInit {
   yAxis: boolean = true;
   showYAxisLabel: boolean = true;
   showXAxisLabel: boolean = true;
-  xAxisLabel: string = 'Year';
-  yAxisLabel: string = 'Population';
+  xAxisLabel: string = 'Месяц';
+  yAxisLabel: string = 'Значение';
   timeline: boolean = true;
 
   colorScheme = {
     domain: ['#5AA454', '#E44D25', '#CFC0BB', '#7aa3e5', '#a8385d', '#aae3f5'],
   };
 
-  constructor() {
-    Object.assign(this, { multi });
+  constructor(private historyDataProviderService: HistoryDataProviderService) {}
+
+  ngOnInit(): void {
+    if (this.pok === PokName.air) {
+      this.chardData = [
+        {
+          name: 'Комплекс ' + this.aggregateId,
+          series: this.historyDataProviderService.getMonthlyDataByPok(
+            1,
+            this.pok,
+            undefined,
+            this.lastPeriodCount
+          ),
+        },
+      ];
+    } else {
+      this.chardData = this.greenhouseId.map((greenhouseId) => ({
+        name: 'Теплица ' + greenhouseId,
+        series: this.historyDataProviderService.getMonthlyDataByPok(
+          1,
+          this.pok,
+          greenhouseId,
+          this.lastPeriodCount
+        ),
+      }));
+    }
   }
 
-  ngOnInit(): void {}
-
   onSelect(data: any): void {
-    console.log('Item clicked', JSON.parse(JSON.stringify(data)));
+    // console.log('Item clicked', JSON.parse(JSON.stringify(data)));
   }
 
   onActivate(data: any): void {
-    console.log('Activate', JSON.parse(JSON.stringify(data)));
+    // console.log('Activate', JSON.parse(JSON.stringify(data)));
   }
 
   onDeactivate(data: any): void {
-    console.log('Deactivate', JSON.parse(JSON.stringify(data)));
+    // console.log('Deactivate', JSON.parse(JSON.stringify(data)));
   }
 }

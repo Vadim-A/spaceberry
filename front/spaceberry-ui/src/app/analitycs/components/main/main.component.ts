@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { HistoryDataProviderService } from 'src/app/core/services/history-data-provider-services/history-data-provider-services.service';
+import { PokName } from 'src/app/core/services/history-data-provider-services/history-data-provider-services.service';
 
 @Component({
   selector: 'app-main',
@@ -7,7 +7,8 @@ import { HistoryDataProviderService } from 'src/app/core/services/history-data-p
   styleUrls: ['./main.component.scss'],
 })
 export class MainComponent implements OnInit {
-  constructor(historyDataProviderService: HistoryDataProviderService) {}
+  pokName = PokName;
+  constructor() {}
 
   ngOnInit(): void {}
 }

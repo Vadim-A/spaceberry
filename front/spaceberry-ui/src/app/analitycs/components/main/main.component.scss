@@ -1,5 +1,6 @@
 @import "../../../../scss/constants.scss";
 
 :host {
+  display: flex;
   padding: $gutter;
 }

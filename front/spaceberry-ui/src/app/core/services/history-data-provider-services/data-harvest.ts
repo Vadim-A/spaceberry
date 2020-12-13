@@ -10,5 +10,5 @@ export const jsonDataHarvest = `[
   {"moment":"2054-03-31","val":4.9},
   {"moment":"2054-06-30","val":16.7},
   {"moment":"2054-09-30","val":9.4},
-  {"moment":"2054-12-03","val":13.7},
+  {"moment":"2054-12-03","val":13.7}
 ]`;

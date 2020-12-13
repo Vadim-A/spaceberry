@@ -10,17 +10,24 @@ export class PieChartComponent implements OnInit {
 
   single = [
     {
-      "name": "Germany",
-      "value": 8940000
+      "name": "Урожайность теплицы 1",
+      "value": 12
     },
     {
-      "name": "USA",
-      "value": 5000000
+      "name": "Урожайность теплицы 2",
+      "value": 3
+    },
+    {
+      "name": "Урожайность теплицы 3",
+      "value": 6
+    },
+    {
+      "name": "Урожайность теплицы 4",
+      "value": 4
     },
   ];
-  view: any = [700, 400];
+  view: any = [1150, 300];
 
-  // options
   gradient: boolean = true;
   showLegend: boolean = true;
   showLabels: boolean = true;
@@ -29,6 +36,8 @@ export class PieChartComponent implements OnInit {
   colorScheme = {
     domain: ['#5AA454', '#A10A28', '#C7B42C', '#AAAAAA']
   };
+
+  valueFormatting = (item: any) => `${item.valie} т.`
 
   constructor() {
   }

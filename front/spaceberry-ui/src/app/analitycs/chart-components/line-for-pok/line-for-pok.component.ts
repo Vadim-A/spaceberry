@@ -20,9 +20,11 @@ export class LineForPokComponent implements OnInit {
   @Input() greenhouseId: number[] = [1, 2, 3, 4, 5];
   @Input() pok!: PokName;
   @Input() lastPeriodCount = 12;
+  @Input() xAxisLabel: string = 'Месяц';
+  @Input() yAxisLabel: string = 'Значение';
 
   chardData: any[] = [];
-  view: [number, number] = [500, 300];
+  view: [number, number] = [350, 300];
 
   // options
   legend: boolean = true;
@@ -32,8 +34,6 @@ export class LineForPokComponent implements OnInit {
   yAxis: boolean = true;
   showYAxisLabel: boolean = true;
   showXAxisLabel: boolean = true;
-  xAxisLabel: string = 'Месяц';
-  yAxisLabel: string = 'Значение';
   timeline: boolean = true;
 
   colorScheme = {
@@ -43,27 +43,31 @@ export class LineForPokComponent implements OnInit {
   constructor(private historyDataProviderService: HistoryDataProviderService) {}
 
   ngOnInit(): void {
+    const data1 = this.historyDataProviderService.getMonthlyDataByPok(
+      1,
+      this.pok,
+      undefined,
+      this.lastPeriodCount
+    );
+
     if (this.pok === PokName.air) {
       this.chardData = [
         {
           name: 'Комплекс ' + this.aggregateId,
-          series: this.historyDataProviderService.getMonthlyDataByPok(
-            1,
-            this.pok,
-            undefined,
-            this.lastPeriodCount
-          ),
+          series: data1
         },
       ];
     } else {
       this.chardData = this.greenhouseId.map((greenhouseId) => ({
         name: 'Теплица ' + greenhouseId,
-        series: this.historyDataProviderService.getMonthlyDataByPok(
-          1,
-          this.pok,
-          greenhouseId,
-          this.lastPeriodCount
-        ),
+        series: [
+          ...this.historyDataProviderService.getMonthlyDataByPok(
+            1,
+            this.pok,
+            greenhouseId,
+            this.lastPeriodCount
+          ),
+        ],
       }));
     }
   }

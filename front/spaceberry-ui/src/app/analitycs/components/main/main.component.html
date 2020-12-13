@@ -1,28 +1,92 @@
 <mat-accordion>
-  <!-- #docregion basic-panel -->
-  <!-- #docregion hide-toggle -->
-  <mat-expansion-panel hideToggle>
-    <!-- #enddocregion hide-toggle -->
+  <mat-expansion-panel [expanded]="true" hideToggle>
     <mat-expansion-panel-header>
-      <mat-panel-title> This is the expansion title </mat-panel-title>
+      <mat-panel-title>Комплекс 1</mat-panel-title>
       <mat-panel-description>
-        This is a summary of the content
+        Описание комплекса 1
       </mat-panel-description>
     </mat-expansion-panel-header>
-    <p>This is the primary content of the panel.</p>
+    <div class="chart">
+      <div class="chart__group">
+        <div>
+          <app-line-for-pok
+            [aggregateId]="1"
+            [pok]="pokName.light"
+            [xAxisLabel]="'Период'"
+            [yAxisLabel]="'Температура'"
+          ></app-line-for-pok>
+        </div>
+        <div>
+          <app-line-for-pok
+            [aggregateId]="2"
+            [pok]="pokName.light"
+            [xAxisLabel]="'Период'"
+            [yAxisLabel]="'Влажность'"
+          ></app-line-for-pok>
+        </div>
+        <div>
+          <app-line-for-pok
+            [aggregateId]="2"
+            [pok]="pokName.light"
+            [xAxisLabel]="'Период'"
+            [yAxisLabel]="'Освещение'"
+          ></app-line-for-pok>
+        </div>
+        <div>
+          <app-line-for-pok
+            [aggregateId]="2"
+            [pok]="pokName.light"
+            [xAxisLabel]="'Период'"
+            [yAxisLabel]="'Кислотность'"
+          ></app-line-for-pok>
+        </div>
+      </div>
+
+      <div class="chart__group">
+        <div>
+          <app-pie-chart></app-pie-chart>
+        </div>
+      </div>
+    </div>
   </mat-expansion-panel>
-  <!-- #enddocregion basic-panel -->
+
+
   <mat-expansion-panel
     (opened)="panelOpenState = true"
     (closed)="panelOpenState = false"
   >
     <mat-expansion-panel-header>
-      <mat-panel-title> Self aware panel </mat-panel-title>
+      <mat-panel-title>Комплекс 2</mat-panel-title>
       <mat-panel-description>
-        Currently I am {{ panelOpenState ? "open" : "closed" }}
+        Описание комплекса 2
       </mat-panel-description>
     </mat-expansion-panel-header>
-    <p>I'm visible because I am open</p>
+    <div class="chart">
+      <div class="chart__group">
+        <div>
+          <app-line-for-pok
+            [aggregateId]="1"
+            [pok]="pokName.light"
+            [xAxisLabel]="'Период'"
+            [yAxisLabel]="'Температура'"
+          ></app-line-for-pok>
+        </div>
+        <div>
+          <app-line-for-pok
+            [aggregateId]="2"
+            [pok]="pokName.light"
+            [xAxisLabel]="'Период'"
+            [yAxisLabel]="'Влажность'"
+          ></app-line-for-pok>
+        </div>
+      </div>
+
+      <div class="chart__group">
+        <div>
+          <app-pie-chart></app-pie-chart>
+        </div>
+      </div>
+      </div>
   </mat-expansion-panel>
 </mat-accordion>
 

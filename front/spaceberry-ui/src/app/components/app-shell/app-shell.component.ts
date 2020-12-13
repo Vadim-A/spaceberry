@@ -36,19 +36,17 @@ export class AppShellComponent implements OnInit {
 
   ngOnInit(): void {}
 
-  // isActiveLink()
-
   onMessagesClick() {
-    this.navigationLinks = [...this.navigationLinks];
     this.activeNavigationLink = this.navigationLinks.find(
       (link) => link.path === moduleLinks.messages
     );
-    this.cd.markForCheck();
     this.router.navigate(['/' + moduleLinks.messages]);
   }
 
-  dirChange(data: MatSelectionListChange) {
-    console.log(data.source);
+  onSelectionChange(data: MatSelectionListChange) {
+    this.activeNavigationLink = this.navigationLinks.find(
+      (link) => data.source._value![0] === link.path
+    );
   }
 
   onLogoutClick() {

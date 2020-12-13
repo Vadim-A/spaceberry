@@ -29,12 +29,12 @@
         <mat-selection-list
           #links
           [multiple]="false"
-          (selectionChange)="dirChange($event)"
+          (selectionChange)="onSelectionChange($event)"
         >
           <mat-list-option
             [selected]="link.path === activeNavigationLink?.path"
             [routerLink]="link.path"
-            [value]="link"
+            [value]="link.path"
             (click)="drawer.close()"
             *ngFor="let link of navigationLinks"
           >

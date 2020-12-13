@@ -35,6 +35,10 @@ export const NAVIGATION_LINKS: navigationLink[] = [
     title: 'Поддержка',
   },
   {
+    path: moduleLinks.messages,
+    title: 'Сообщения',
+  },
+  {
     path: moduleLinks.settings,
     title: 'Настройки',
   },

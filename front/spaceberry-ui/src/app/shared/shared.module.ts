@@ -13,6 +13,7 @@ import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatIconModule } from '@angular/material/icon';
 import { MatSelectModule } from '@angular/material/select'; //?
 import { MatListModule } from '@angular/material/list';
+import { MatExpansionModule } from '@angular/material/expansion';
 import { MAT_RIPPLE_GLOBAL_OPTIONS } from '@angular/material/core';
 import { NgxChartsModule, PieChartModule } from '@swimlane/ngx-charts';
 
@@ -32,8 +33,9 @@ import { NgxChartsModule, PieChartModule } from '@swimlane/ngx-charts';
     MatIconModule,
     MatSelectModule,
     MatListModule,
+    MatExpansionModule,
     NgxChartsModule,
-    PieChartModule
+    PieChartModule,
   ],
   declarations: [],
   exports: [
@@ -50,6 +52,7 @@ import { NgxChartsModule, PieChartModule } from '@swimlane/ngx-charts';
     MatIconModule,
     MatSelectModule,
     MatListModule,
+    MatExpansionModule,
     NgxChartsModule,
     PieChartModule,
   ],

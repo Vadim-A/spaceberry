@@ -47,6 +47,14 @@ export const routes: Routes = [
         data: { preload: true },
       },
       {
+        path: moduleLinks.diagnostics,
+        loadChildren: () =>
+          import('./diagnostics/diagnostics.module').then(
+            (m) => m.DiagnosticsModule
+          ),
+        data: { preload: true },
+      },
+      {
         path: moduleLinks.messages,
         loadChildren: () =>
           import('./messages/messages.module').then(

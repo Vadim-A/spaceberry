@@ -9,6 +9,12 @@
 
   <div class="header__user-name">Логин: demo</div>
 
+  <div class="header__messages-button">
+    <button mat-icon-button color="accent" (click)="onMessagesClick()">
+      <mat-icon [style.color]="'white'">mail</mat-icon>
+    </button>
+  </div>
+
   <div class="header__logout-button">
     <button mat-icon-button color="accent" (click)="onLogoutClick()">
       <mat-icon [style.color]="'white'">exit_to_app</mat-icon>
@@ -20,11 +26,16 @@
   <mat-drawer-container autosize>
     <mat-drawer #drawer mode="over">
       <aside>
-        <mat-selection-list #links [multiple]="false">
+        <mat-selection-list
+          #links
+          [multiple]="false"
+          (selectionChange)="dirChange($event)"
+        >
           <mat-list-option
             [selected]="link.path === activeNavigationLink?.path"
-            (click)="drawer.close()"
             [routerLink]="link.path"
+            [value]="link"
+            (click)="drawer.close()"
             *ngFor="let link of navigationLinks"
           >
             {{ link.title }}

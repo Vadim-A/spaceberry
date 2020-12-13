@@ -8,6 +8,9 @@ import { PokName } from 'src/app/core/services/history-data-provider-services/hi
 })
 export class MainComponent implements OnInit {
   pokName = PokName;
+
+  panelOpenState: boolean = false;
+
   constructor() {}
 
   ngOnInit(): void {}

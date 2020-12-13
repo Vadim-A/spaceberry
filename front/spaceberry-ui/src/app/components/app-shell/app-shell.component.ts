@@ -1,5 +1,15 @@
-import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
+import {
+  ChangeDetectionStrategy,
+  ChangeDetectorRef,
+  Component,
+  OnInit,
+} from '@angular/core';
+import {
+  MatSelectionList,
+  MatSelectionListChange,
+} from '@angular/material/list';
 import { Router } from '@angular/router';
+import { moduleLinks } from 'src/app/core/constants/app-links';
 import { AuthService } from 'src/app/core/services';
 import { navigationLink, NAVIGATION_LINKS } from './navigations-link';
 
@@ -14,7 +24,11 @@ export class AppShellComponent implements OnInit {
 
   activeNavigationLink?: navigationLink;
 
-  constructor(private authService: AuthService, private router: Router) {
+  constructor(
+    private authService: AuthService,
+    private router: Router,
+    private cd: ChangeDetectorRef
+  ) {
     this.activeNavigationLink = this.navigationLinks.find((link) =>
       this.router.url.startsWith('/' + link.path)
     );
@@ -22,9 +36,24 @@ export class AppShellComponent implements OnInit {
 
   ngOnInit(): void {}
 
+  // isActiveLink()
+
+  onMessagesClick() {
+    this.navigationLinks = [...this.navigationLinks];
+    this.activeNavigationLink = this.navigationLinks.find(
+      (link) => link.path === moduleLinks.messages
+    );
+    this.cd.markForCheck();
+    this.router.navigate(['/' + moduleLinks.messages]);
+  }
+
+  dirChange(data: MatSelectionListChange) {
+    console.log(data.source);
+  }
+
   onLogoutClick() {
     this.authService.logout();
-    this.router.navigate(['/login']);
+    this.router.navigate(['/' + moduleLinks.login]);
   }
 
   onNavigationLinkClick($event: any) {

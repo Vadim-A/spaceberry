@@ -10,7 +10,7 @@ header {
   display: flex;
   flex-flow: row nowrap;
   flex: none;
-  background-color: #8EC26D;
+  background-color: #8ec26d;
   height: 60px;
 
   div {
@@ -31,6 +31,9 @@ header {
 
   .header__user-name {
     padding: 5px;
+    font-weight: bold;
+    font-size: $font-size-16;
+    color: $color-12;
   }
 }
 

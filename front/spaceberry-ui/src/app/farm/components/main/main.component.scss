@@ -19,6 +19,12 @@
 
     .info-list__title {
       margin-bottom: $big-gutter;
+      font-size: $font-size-18;
+      color: $color-12;
+    }
+    .info-list__footer {
+      color: $color-accept;
+      font-size: $font-size-16;
     }
   }
 

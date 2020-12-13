@@ -2,9 +2,9 @@
   <app-value-card [value]="'1'" [text]="'Комплекс'"></app-value-card>
   <app-value-card [value]="'5'" [text]="'Теплиц'"></app-value-card>
   <app-value-card [value]="'500м2'" [text]="'Общая площадь'"></app-value-card>
-  <app-value-card [value]="'623 т.'" [text]="'Прогноз урожая'"></app-value-card>
+  <app-value-card [value]="'25 т.'" [text]="'Прогноз урожая'"></app-value-card>
   <app-value-card
-    [value]="'689 987 р.'"
+    [value]="'12 403 125 руб.'"
     [text]="'Прогноз заработка'"
   ></app-value-card>
 
@@ -13,7 +13,7 @@
   </div>
 
   <div class="button">
-    <div>Все теплицы</div>
+    <div>Видео</div>
   </div>
 </div>
 
@@ -25,6 +25,7 @@
       <div>{{ item.text }}</div>
       <div class="date">{{ item.date }}</div>
     </div>
+    <div class="info-list__footer">Посмотреть все</div>
   </div>
   <div class="info-list">
     <div class="info-list__title">События оборудования</div>
@@ -33,5 +34,6 @@
       <div>{{ item.text }}</div>
       <div class="date">{{ item.date }}</div>
     </div>
+    <div class="info-list__footer">Посмотреть все</div>
   </div>
 </div>

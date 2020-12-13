@@ -34,7 +34,7 @@ export class PieChartComponent implements OnInit {
   isDoughnut: boolean = false;
 
   colorScheme = {
-    domain: ['#5AA454', '#A10A28', '#C7B42C', '#AAAAAA']
+    domain: ['#f26cdd', '#77dff5', '#fcba11', '#ee3d5d']
   };
 
   valueFormatting = (item: any) => `${item.valie} т.`

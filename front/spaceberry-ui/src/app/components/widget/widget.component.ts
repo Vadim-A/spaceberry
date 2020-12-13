@@ -22,7 +22,7 @@ export class WidgetComponent implements OnInit {
   colorScheme = {
     domain: ['#5AA454', '#E44D25']
   };
-  cardColor: string = '#232837';
+  cardColor: string = 'white';
 
   constructor() { }
   ngOnInit(): void {

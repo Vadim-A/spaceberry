@@ -1,3 +1,166 @@
-<app-pie-chart>
+<div class="root">
+  <div class="home">
 
-</app-pie-chart>
+    <div class="home__header">
+      <h1 class="home__title">
+        Мои теплицы
+      </h1>
+  
+      <div class="home__header__amount">
+        <span>Всего собрано 0</span>
+        <span>Всего заработано 0</span>
+      </div>
+    </div>
+
+
+    <div class="home__greenhouses">
+      <div class="greenhouse-group">
+        <div class="prediction">
+          <mat-card>
+            <mat-card-title class="prediction__title">
+              Кимберли
+            </mat-card-title>
+            <mat-card-content class="prediction__content">
+              <div class="prediction__block">
+                <div class="prediction__inner">
+                  <div class="prediction__value">
+                    5
+                  </div>
+                  <div class="prediction__description">
+                    Температура
+                  </div>
+                </div>
+                <div class="prediction__gradient">
+                  <div class="prediction__gradient__spinner"></div>
+                </div>
+              </div>
+        
+              <div class="prediction__block">
+                <div class="prediction__inner">
+                  <div class="prediction__value">
+                    12
+                  </div>
+                  <div class="prediction__description">
+                    Ожидаемый результат
+                  </div>
+                </div>
+              </div>
+        
+              <div class="prediction__block">
+                <div class="prediction__inner">
+                  <div class="prediction__value">
+                    48
+                  </div>
+                  <div class="prediction__description">
+                    дней до созревания
+                  </div>
+                </div>
+              </div>
+        
+              <div class="prediction__block">
+                <div class="prediction__inner">
+                  <div class="prediction__value">
+                    0
+                  </div>
+                  <div class="prediction__description">
+                    собрано
+                  </div>
+                </div>
+              </div>
+            </mat-card-content>
+          </mat-card>
+        </div>
+      </div>
+
+      <div class="greenhouse__add">
+        <p>
+          Новая группа
+        </p>
+        <img src="../../../../assets/images/add-greenhouse.svg" alt="">
+      </div>
+    </div>
+
+    <div class="greenhouses">
+      <div class="greenhouse">
+        <mat-card>
+          <mat-card-title>
+            Теплица 1
+          </mat-card-title>
+          <mat-card-content>
+            <app-widget
+              [single]="single"
+              [valueMapper]="valueMapper"
+              (select)="onSelect($event)"
+            ></app-widget>
+          </mat-card-content>
+        </mat-card>
+      </div>
+
+
+      <div class="greenhouse">
+        <mat-card>
+          <mat-card-title>
+            Теплица 2
+          </mat-card-title>
+          <mat-card-content>
+            <app-widget
+              [single]="single"
+              [valueMapper]="valueMapper"
+              (select)="onSelect($event)"
+            ></app-widget>
+          </mat-card-content>
+        </mat-card>
+      </div>
+
+
+      <div class="greenhouse">
+        <mat-card>
+          <mat-card-title>
+            Теплица 3
+          </mat-card-title>
+          <mat-card-content>
+            <app-widget
+              [single]="single"
+              [valueMapper]="valueMapper"
+              (select)="onSelect($event)"
+            ></app-widget>
+          </mat-card-content>
+        </mat-card>
+      </div>
+
+
+      <div class="greenhouse">
+        <mat-card>
+          <mat-card-title>
+            Теплица 4
+          </mat-card-title>
+          <mat-card-content>
+            <app-widget
+              [single]="single"
+              [valueMapper]="valueMapper"
+              (select)="onSelect($event)"
+            ></app-widget>
+          </mat-card-content>
+        </mat-card>
+      </div>
+
+
+      <div class="greenhouse">
+        <mat-card>
+          <mat-card-title>
+            Теплица 5
+          </mat-card-title>
+          <mat-card-content>
+            <app-widget
+              [single]="single"
+              [valueMapper]="valueMapper"
+              (select)="onSelect($event)"
+            ></app-widget>
+          </mat-card-content>
+        </mat-card>
+      </div>
+
+    </div>
+
+  </div>
+</div>

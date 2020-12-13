@@ -7,26 +7,6 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MainComponent implements OnInit {
 
-  view: any = [700, 400];
-
-
-  single = [
-    {
-      "name": "Влажность почвы",
-      "value": 79
-    },
-    {
-      "name": "Освещенность",
-      "value": 26
-    },
-    {
-      "name": "Кислотность",
-      "value": 13
-    },
-  ];
-
-  valueMapper = (value: any) => `${value.value}%`
-
   ngOnInit(): void {
   }
 

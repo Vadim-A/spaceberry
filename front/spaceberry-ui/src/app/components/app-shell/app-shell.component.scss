@@ -1,0 +1,63 @@
+@import "../../../scss/constants.scss";
+
+:host {
+  display: flex;
+  flex-flow: column nowrap;
+  flex: auto;
+}
+
+header {
+  display: flex;
+  flex-flow: row nowrap;
+  flex: none;
+  background-color: #8ec26d;
+  height: 60px;
+
+  div {
+    display: flex;
+    align-items: center;
+  }
+
+  .header__page-title,
+  .header__user-name {
+    padding: 5px;
+  }
+
+  .header__page-title {
+    flex: auto;
+    font-weight: bold;
+    font-size: 32px;
+  }
+
+  .header__user-name {
+    padding: 5px;
+    font-weight: bold;
+    font-size: $font-size-16;
+    color: $color-12;
+  }
+}
+
+aside {
+  width: 220px;
+}
+
+main {
+  display: flex;
+  flex: auto;
+  background-color: hotpink;
+
+  mat-drawer-container {
+    flex: auto;
+    height: 100%;
+  }
+
+  .content {
+    display: flex;
+    flex: auto;
+    height: 100%;
+  }
+}
+
+.active {
+  background-color: blue;
+}

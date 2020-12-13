@@ -1,0 +1,51 @@
+<header class="header">
+  <div class="header__menu-button">
+    <button mat-icon-button matri color="accent" (click)="drawer.toggle()">
+      <mat-icon [style.color]="'white'">menu</mat-icon>
+    </button>
+  </div>
+
+  <div class="header__page-title">Farmer.AI</div>
+
+  <div class="header__user-name">demo</div>
+
+  <div class="header__messages-button">
+    <button mat-icon-button color="accent" (click)="onMessagesClick()">
+      <mat-icon [style.color]="'white'">mail</mat-icon>
+    </button>
+  </div>
+
+  <div class="header__logout-button">
+    <button mat-icon-button color="accent" (click)="onLogoutClick()">
+      <mat-icon [style.color]="'white'">exit_to_app</mat-icon>
+    </button>
+  </div>
+</header>
+
+<main>
+  <mat-drawer-container autosize>
+    <mat-drawer #drawer mode="over">
+      <aside>
+        <mat-selection-list
+          #links
+          [multiple]="false"
+          (selectionChange)="onSelectionChange($event)"
+        >
+          <mat-list-option
+            [selected]="link.path === activeNavigationLink?.path"
+            [routerLink]="link.path"
+            [value]="link.path"
+            (click)="drawer.close()"
+            *ngFor="let link of navigationLinks"
+          >
+            {{ link.title }}
+          </mat-list-option>
+        </mat-selection-list>
+      </aside>
+    </mat-drawer>
+
+    <div class="content">
+      <router-outlet></router-outlet>
+    </div>
+  </mat-drawer-container>
+</main>

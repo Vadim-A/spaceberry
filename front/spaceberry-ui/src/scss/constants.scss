@@ -1,0 +1,51 @@
+// Допустимые значения стилей
+
+// основные цвета
+$color-1: #000000;
+$color-2: #c4c4c4; // ?
+$color-3: #0047ff;
+$color-4: #8000ff;
+$color-6: #f4b000;
+$color-7: #ee3d5d;
+$color-8: #94c576;
+$color-9: #a3d286;
+$color-10: #8abd6a;
+$color-11: #cbebb7;
+$color-12: #7868bb;
+$color-13: #443480;
+$color-14: #ffffff;
+
+$border-widtth: 2px;
+$border-radius: 16px;
+$box-shadow: 2px 2px $border-radius rgba(68, 52, 128, 0.16);
+
+// Размеры шрифтов
+$font-size-24: 24px; // h1 ??
+$font-size-18: 18px; // Headline
+$font-size-16: 16px; // Subhead
+$font-size-14: 14px; // Body
+$font-size-12: 12px; // Footnote
+
+$font-family-base: "Lato", Arial, sans-serif;
+
+// https://material.io/design/color/the-color-system.html#color-theme-creation
+$color-font: $color-1;
+$color-link: $color-3;
+$color-link-active: $color-4;
+$color-accept: $color-8;
+$color-warring: $color-6;
+$color-error: $color-7;
+
+$color-button-normal: $color-8;
+$color-button-hover: $color-9;
+$color-button-active: $color-10;
+$color-button-disabled: $color-11;
+$color-button-border: $color-8;
+$color-input-border: $color-12;
+$color-slider: $color-13;
+$color-background: $color-13;
+
+// Шаблоны стилей для элементов UI
+$gutter: 15px; // базовая единица отступа
+$big-gutter: $gutter * 2;
+$half-gutter: floor($gutter / 2);

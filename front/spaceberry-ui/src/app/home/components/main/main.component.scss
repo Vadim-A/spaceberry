@@ -1,0 +1,138 @@
+
+:host {
+  display: flex;
+  width: 100%;
+}
+
+.root {
+  width: 100%;
+  padding: 24px;
+}
+
+.home {
+  &__header {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+
+    &__amount {
+      font-weight: bold;
+      font-size: 24px;
+      line-height: 28px;
+      color: #AAA2CA;
+
+      span + span {
+        margin-left: 24px;
+      }
+    }
+  }
+
+  &__title {
+    font-weight: bold;
+    font-size: 32px;
+    line-height: 38px;
+    color: #443480;
+    margin-right: 120px;
+  }
+
+  &__greenhouses {
+    display: flex;
+    align-items: center;
+    margin-bottom: 32px;
+  }
+}
+
+.greenhouse__add {
+  margin-left: 32px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  p {
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 22px;
+    color: #7868BB;
+  }
+}
+
+.prediction {
+  display: flex;
+  color: #443480;
+  width: 352px;
+
+  &__content {
+    display: flex;
+    flex-flow: row wrap;
+  }
+
+  &__block {
+    width: 150px;
+    height: 100px;
+  }
+
+  &__title {
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 21px;
+    color: #443480;
+  }
+
+  &__value {
+    font-size: 40px;
+    line-height: 54px;
+    color: #443480;
+    font-weight: bold;
+  }
+
+  &__description {
+    color: #443480;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 19px;
+  }
+
+  &__gradient {
+    margin: 5px 0;
+    width: 128px;
+    height: 6px;
+    background: linear-gradient(270deg, #F06F7D 0%, #E2CE18 28.12%, #94C576 42.19%, #94C576 63.54%, #0997E8 100%);
+    border-radius: 8px;
+    position: relative;
+
+    &__spinner {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      border: 2px solid #FFFFFF;
+      background-color: #443480;
+    }
+  }
+}
+
+.greenhouses {
+  display: flex;
+  flex-flow: row wrap;
+
+  .greenhouse:nth-of-type(even) {
+    margin-left: 32px;
+  }
+}
+
+.greenhouse {
+  margin-top: 32px;
+
+  mat-card-title {
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 22px;
+    color: #443480;
+  }
+
+  
+}

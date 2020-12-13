@@ -1,0 +1,65 @@
+@import "../../../../scss/constants.scss";
+
+:host {
+  padding: $gutter;
+  .info-panel {
+    display: flex;
+    .button,
+    app-value-card {
+      margin-right: 40px;
+    }
+  }
+}
+
+.messages {
+  display: flex;
+  .info-list {
+    width: 500px;
+    margin-right: $gutter;
+
+    .info-list__title {
+      margin-bottom: $big-gutter;
+      font-size: $font-size-18;
+      color: $color-12;
+    }
+    .info-list__footer {
+      color: $color-accept;
+      font-size: $font-size-16;
+    }
+  }
+
+  .message {
+    margin-bottom: $big-gutter;
+    .title {
+      font-weight: bold;
+      margin-bottom: $half-gutter;
+    }
+    .title.accept {
+      color: $color-accept;
+    }
+    .title.warring {
+      color: $color-warring;
+    }
+    .title.error {
+      color: $color-error;
+    }
+
+    .date {
+      font-size: 12px;
+      color: #444444;
+      margin-top: $half-gutter;
+    }
+  }
+}
+
+.button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #8ec26d;
+  width: 160px;
+  height: 64px;
+  border: 2px solid #8ec26d;
+  box-sizing: border-box;
+  border-radius: 16px;
+}

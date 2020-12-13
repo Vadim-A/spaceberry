@@ -1,0 +1,105 @@
+<mat-accordion>
+  <mat-expansion-panel [expanded]="true" hideToggle>
+    <mat-expansion-panel-header>
+      <mat-panel-title>Комплекс 1</mat-panel-title>
+      <mat-panel-description>
+        Описание комплекса 1
+      </mat-panel-description>
+    </mat-expansion-panel-header>
+    <div class="chart">
+      <div class="chart__group">
+        <div>
+          <app-line-for-pok
+            [aggregateId]="1"
+            [pok]="pokName.light"
+            [xAxisLabel]="'Период'"
+            [yAxisLabel]="'Температура'"
+          ></app-line-for-pok>
+        </div>
+        <div>
+          <app-line-for-pok
+            [aggregateId]="2"
+            [pok]="pokName.light"
+            [xAxisLabel]="'Период'"
+            [yAxisLabel]="'Влажность'"
+          ></app-line-for-pok>
+        </div>
+        <div>
+          <app-line-for-pok
+            [aggregateId]="2"
+            [pok]="pokName.light"
+            [xAxisLabel]="'Период'"
+            [yAxisLabel]="'Освещение'"
+          ></app-line-for-pok>
+        </div>
+        <div>
+          <app-line-for-pok
+            [aggregateId]="2"
+            [pok]="pokName.light"
+            [xAxisLabel]="'Период'"
+            [yAxisLabel]="'Кислотность'"
+          ></app-line-for-pok>
+        </div>
+      </div>
+
+      <div class="chart__group">
+        <div>
+          <app-pie-chart></app-pie-chart>
+        </div>
+      </div>
+    </div>
+  </mat-expansion-panel>
+
+
+  <mat-expansion-panel
+    (opened)="panelOpenState = true"
+    (closed)="panelOpenState = false"
+  >
+    <mat-expansion-panel-header>
+      <mat-panel-title>Комплекс 2</mat-panel-title>
+      <mat-panel-description>
+        Описание комплекса 2
+      </mat-panel-description>
+    </mat-expansion-panel-header>
+    <div class="chart">
+      <div class="chart__group">
+        <div>
+          <app-line-for-pok
+            [aggregateId]="1"
+            [pok]="pokName.light"
+            [xAxisLabel]="'Период'"
+            [yAxisLabel]="'Температура'"
+          ></app-line-for-pok>
+        </div>
+        <div>
+          <app-line-for-pok
+            [aggregateId]="2"
+            [pok]="pokName.light"
+            [xAxisLabel]="'Период'"
+            [yAxisLabel]="'Влажность'"
+          ></app-line-for-pok>
+        </div>
+      </div>
+
+      <div class="chart__group">
+        <div>
+          <app-pie-chart></app-pie-chart>
+        </div>
+      </div>
+      </div>
+  </mat-expansion-panel>
+</mat-accordion>
+
+<!-- 
+<div>
+  <app-line-for-pok [aggregateId]="1" [pok]="pokName.air"></app-line-for-pok>
+</div>
+<div>
+  <app-line-for-pok [aggregateId]="1" [pok]="pokName.light"></app-line-for-pok>
+</div>
+<div>
+  <app-line-for-pok [aggregateId]="1" [pok]="pokName.acid"></app-line-for-pok>
+</div>
+<div>
+  <app-line-for-pok [aggregateId]="1" [pok]="pokName.water"></app-line-for-pok>
+</div> -->

@@ -1,0 +1,20 @@
+@import "../../../../scss/constants.scss";
+
+:host {
+  padding: $gutter;
+  display: flex;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+}
+
+mat-card {
+  width: 500px;
+}
+
+mat-card-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
